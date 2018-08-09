@@ -33,25 +33,15 @@ public class schoolmoodle2
 		//private files
 		Thread.sleep(3000);
 		driver.findElement(By.xpath(".//*[@id='nav-drawer']/nav/a[4]")).click();
-		Thread.sleep(3000);
+		Thread.sleep(7000);
 		//log out button
 		driver.findElement(By.xpath(".//*[@id='dropdown-1']")).click();
 		Thread.sleep(3000);
 		//log out
 		driver.findElement(By.xpath(".//*[@id='actionmenuaction-6']")).click();
 		
-		/*driver.findElement(By.xpath("")).click();
 		
-		driver.findElement(By.xpath("")).click();
-		
-		driver.findElement(By.xpath("")).click();
-		
-		driver.findElement(By.xpath("")).click();
-		
-*/		
-		
-		
-		driver.close();
+		//driver.close();
 	}
 }
 

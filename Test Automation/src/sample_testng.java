@@ -1,66 +1,57 @@
-import java.io.File;
-import java.util.concurrent.TimeUnit;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
-
-public class Cart {
+public class sample_testng {
 
 	
-	public static void main(String[] args) throws InterruptedException {
+	WebDriver driver= new ChromeDriver();
+	
+	
+	@BeforeTest
+	public void start() throws IOException, InterruptedException {
 		
 		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
 		WebDriver driver= new ChromeDriver();
-		 
-		//url
+	
 		driver.get("http://automationpractice.com/");
-
-		//maximize 
-		driver.manage().window().maximize();
-		Thread.sleep(1000);
+		Thread.sleep(1000);		
 		
-		
-		//login
 		driver.findElement(By.xpath(".//a[@class='login']")).click();
 		driver.findElement(By.xpath(".//input[@id='email']")).sendKeys("ap.math90@gmail.com");
 		driver.findElement(By.xpath(".//input[@id='passwd']")).sendKeys("pqu772_90");
-		Thread.sleep(1000);
+		driver.findElement(By.xpath(".//*[@id='SubmitLogin']")).click();
+		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(scrFile, new File("E:\\Selenium\\screenshot1.png"), true);	
+	}
+	
+	@Test
+	public void Login()throws InterruptedException, Throwable {
 		
-		driver.findElement(By.xpath(".//button[@id='SubmitLogin']")).click();
 		
-		//implicit wait
+		//driver.findElement(By.xpath(".//*[@id='SubmitLogin']")).click();
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
-		
-		//next page 
-		driver.findElement(By.xpath(".//a[@title='Women']")).click();
+		driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/header[1]/div[3]/div[1]/div[1]/div[6]/ul[1]/li[1]/a[1]")).click();
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 		driver.findElement(By.xpath(".//input[@id='layered_category_4']")).click();
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 		driver.findElement(By.xpath(".//div[@class='right-block']//a[contains(@title,'Faded Short Sleeve T-shirts')]")).click();
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+		
 		driver.findElement(By.xpath(".//p[@id='add_to_cart']//button[@name='Submit']")).click();
 		Thread.sleep(1000);
-		
-		//scroll down
-		JavascriptExecutor js=(JavascriptExecutor)driver;
-		js.executeScript("window.scrollBy(100,500)");
-		System.out.println("scrolled Down");
-		Thread.sleep(5000);
-		
-		//mouse hover
-		Actions action=new Actions(driver);
-		action.moveToElement(driver.findElement(By.xpath(".//*[@id='layer_cart']/div[1]/div[2]/div[4]/a/span"))).build().perform();
-		Thread.sleep(3000);
-
-		driver.findElement(By.xpath(".//*[@id='layer_cart']/div[1]/div[2]/div[4]/a/span")).click();
+				
+		driver.findElement(By.xpath("//a[contains(@title,'Proceed to checkout')]")).click();
 		Thread.sleep(1000);
 		
 		driver.findElement(By.xpath(".//*[@id='center_column']/p[2]/a[1]/span")).click();
@@ -71,34 +62,21 @@ public class Cart {
 		
 		driver.findElement(By.xpath(".//input[@id='cgv']")).click();
 		Thread.sleep(1000);
-		
-		
+		//driver.findElement(By.xpath(".//input[@id='cgv']")).click();
 		driver.findElement(By.xpath(".//button[@name='processCarrier']")).click();
 		Thread.sleep(1000);
-		
-		//implicit wait
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
-		
 		driver.findElement(By.xpath(".//a[contains(@title,'Pay by bank wire')]")).click();
 		Thread.sleep(10000);
-		
 		driver.findElement(By.xpath(".//*[@id='cart_navigation']/button")).click();
 		
-		driver.findElement(By.xpath(".//*[@id='block_top_menu']/ul/li[2]/a")).click();
-	
-		driver.findElement(By.xpath(".//*[@id='selectProductSort']/option[3]")).click();
-		
-		System.out.println("clicked on highest first");
-		
-		Thread.sleep(2000);
-		
-		//sign out
-		driver.findElement(By.xpath("//a[@title='Log me out']")).click();
-		Thread.sleep(8000);
-		driver.close();
-		
-		
-		
+			
 	}
-	
+	@AfterTest
+	public void quit() {
+		
+		driver.quit();
+	}
 }
+
+

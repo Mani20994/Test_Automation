@@ -72,7 +72,7 @@ public class Phptravels_flights {
 		//logout
 		driver.findElement(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/div[2]/div[1]/div[2]/div[1]/a[1]")).click();
 	
-		driver.close();
+		//driver.close();
 	
 	}
 	

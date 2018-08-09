@@ -1,4 +1,5 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 //import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -23,24 +24,35 @@ public class manager {
 			//site home
 			Thread.sleep(3000);
 			driver.findElement(By.xpath(".//*[@id='nav-drawer']/nav[1]/a[2]")).click();
-			//go to courses
+			//choose a role
 			Thread.sleep(3000);
 			driver.findElement(By.xpath(".//*[@id='region-main']/div/div/div/div/div/div/div[2]/div/div[1]/p[2]/a")).click();
-			//art and media
+			//manager
 			Thread.sleep(3000);
 			driver.findElement(By.xpath(".//*[@id='region-main']/div/div/div[2]/div[1]/div/div[2]/div/p[3]/a[3]")).click();
+			JavascriptExecutor js=(JavascriptExecutor)driver;
+			js.executeScript("window.scrollBy(100,500)");
+			System.out.println("scrolled Down");
+			Thread.sleep(5000);
 			//calender
 			Thread.sleep(3000);
 			driver.findElement(By.xpath(".//*[@id='nav-drawer']/nav[1]/a[3]")).click();
+			JavascriptExecutor js1=(JavascriptExecutor)driver;
+			js1.executeScript("window.scrollBy(100,500)");
+			System.out.println("scrolled Down");
+			Thread.sleep(5000);
+			
 			//private files
-			driver.findElement(By.xpath("html/body/div[1]/div[3]/nav[1]/a[4]")).click();
-			Thread.sleep(3000);
-			//log ou button
+			driver.findElement(By.xpath(".//*[@id='nav-drawer']/nav[1]/a[4]")).click();
+			Thread.sleep(8000);
+			driver.findElement(By.xpath(".//*[@id='id_submitbutton']")).click();
+			Thread.sleep(8000);
+			//log out button
 			driver.findElement(By.xpath("html/body/div[1]/nav/ul[2]/li[2]/div/div/div/div/div/a")).click();
 			Thread.sleep(3000);
 			//log out
 			driver.findElement(By.xpath("html/body/div[1]/nav/ul[2]/li[2]/div/div/div/div/div/div/a[6]")).click();
-		driver.close();
+			//driver.close();
 		}
 		
 }

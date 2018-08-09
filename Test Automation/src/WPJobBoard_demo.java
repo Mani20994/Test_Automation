@@ -30,7 +30,7 @@ public class WPJobBoard_demo {
 		
 		Thread.sleep(10000);
 		//description
-		//driver.findElement(By.xpath("html/body/div[1]/div[2]/div[2]/div[1]/div[2]/form/div[3]/div/div[1]/div[1]/div/table/tbody/tr[2]/td/div/div/div/div/div[2]")).sendKeys("job description");
+		driver.findElement(By.xpath("html/body/div[1]/div[2]/div[2]/div[1]/div[2]/form/div[3]/div/div[1]/div[1]/div/table/tbody/tr[2]/td/div/div/div/div/div[2]")).sendKeys("job description");
 		//job type
 		driver.findElement(By.xpath("html/body/div[1]/div[2]/div[2]/div[1]/div[2]/form/div[3]/div/div[1]/div[1]/div/table/tbody/tr[3]/td/select")).click();
 		//full time

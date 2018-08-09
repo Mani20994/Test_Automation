@@ -17,13 +17,13 @@ action.moveToElement(driver.findElement(By.xpath("//a[@id='nav-link-yourAccount'
 Thread.sleep(3000);
 	   driver.findElement(By.xpath("(//span[@class='nav-action-inner'])[1]")).click();
 	      Thread.sleep(3000);
-		  driver.findElement(By.xpath(".//*[@id='ap_email']")).sendKeys("9964711440");
+		  driver.findElement(By.xpath(".//*[@id='ap_email']")).sendKeys("mani20994@gmail.com");
 		   driver.findElement(By.xpath(".//*[@id='continue']")).click();
-		   driver.findElement(By.xpath(".//*[@id='ap_password']")).sendKeys("Minds123");
+		   driver.findElement(By.xpath(".//*[@id='ap_password']")).sendKeys("swty1234");
 		   driver.findElement(By.xpath(".//*[@id='signInSubmit']")).click();
 		   
 		
-		   //Dropdown
+		 //Dropdown
 		 driver.findElement(By.xpath(".//*[@id='searchDropdownBox']")).click();
 		 
 		
@@ -31,6 +31,7 @@ Thread.sleep(3000);
 		
 		Select item=new Select(searchDropdownBox);
 		item.selectByValue("search-alias=appliances");
+		
 	}
 	
 }

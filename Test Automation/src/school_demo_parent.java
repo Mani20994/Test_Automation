@@ -1,5 +1,6 @@
 //import java.io.IOException;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 //import org.openqa.selenium.JavascriptExecutor;
 //import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -26,37 +27,33 @@ public class school_demo_parent {
 					//site home
 					Thread.sleep(3000);
 					driver.findElement(By.xpath(".//*[@id='nav-drawer']/nav/a[2]")).click();
-					//next button
-					
-					/*
+					//choose a role
 					Thread.sleep(3000);
-					driver.findElement(By.xpath("html/body/div[1]/div[2]/div/div/section/div/div/div/form/div[3]/div/div[3]/div/label/input")).click();
-					
+					driver.findElement(By.xpath(".//*[@id='region-main']/div/div/div/div/div/div/div[2]/div/div[1]/p[2]/a")).click();
+					//parent
 					Thread.sleep(3000);
-					driver.findElement(By.xpath("html/body/div[1]/div[2]/div/div/section/div/div/div/form/div[3]/div/div[3]/div/label/input")).click();
+					driver.findElement(By.xpath(".//*[@id='region-main']/div/div/div[1]/div[1]/div/div[2]/div/p[3]/a[4]")).click();
+					JavascriptExecutor js=(JavascriptExecutor)driver;
+					js.executeScript("window.scrollBy(200,500)");
+					System.out.println("scrolled Down");
+					Thread.sleep(5000);
 					
-					Thread.sleep(3000);
-					driver.findElement(By.xpath("html/body/div[1]/div[2]/div/div/section/div/div/div/form/div[5]/div/div[3]/div/label/input")).click();
 					
-					Thread.sleep(3000);
-					driver.findElement(By.xpath("html/body/div[1]/div[2]/div/div/section/div/div/div/form/input[2]")).click();
-					/*Thread.sleep(3000);
-					driver.findElement(By.xpath("html/body/div[1]/div[2]/div/div/section/div/div/div/div/div/div/div[2]/div/div[1]/p[2]/a")).click();
-					Thread.sleep(3000);
-					driver.findElement(By.xpath("html/body/div[1]/div[2]/div/div/section/div/div/div[1]/div[1]/div/div[2]/div/p[3]/a[4]")).click();
-					
-					*/
 					//calender
 					Thread.sleep(3000);
 					driver.findElement(By.xpath("html/body/div[1]/div[3]/nav/a[3]")).click();
-					/*//private files
+					JavascriptExecutor js1=(JavascriptExecutor)driver;
+					js1.executeScript("window.scrollBy(100,500)");
+					System.out.println("scrolled Down");
+					Thread.sleep(5000);
+					//private files
 					Thread.sleep(3000);
-					driver.findElement(By.xpath("/html/body/div[1]/div[3]/nav/a[4]")).click(); */
+					driver.findElement(By.xpath(".//*[@id='nav-drawer']/nav/a[4]")).click(); 
 					//log out button
 							driver.findElement(By.xpath("html/body/div[1]/nav/ul[2]/li[2]/div/div/div/div/div/a")).click();
 							Thread.sleep(3000);
 							//log out
 							driver.findElement(By.xpath(".//*[@id='actionmenuaction-6']")).click();
-							driver.close();
+							//driver.close();
 				}
 			}
