@@ -12,7 +12,7 @@ public class Facebook {
 		driver.manage().window().maximize();
 		driver.get("https://facebook.com");
 		Thread.sleep(7000);
-		driver.findElement(By.xpath("//input[@id='u_0_j']")).sendKeys("Anam");
+		driver.findElement(By.xpath(".//*[@id='u_0_j']")).sendKeys("Anam");
 		driver.findElement(By.xpath(".//*[@id='u_0_l']")).sendKeys("Khan");
 		driver.findElement(By.xpath(".//*[@id='u_0_o']")).sendKeys("anam123khan@gmail.com");
 		driver.findElement(By.xpath(".//*[@id='u_0_r']")).sendKeys("anam123khan@gmail.com");
