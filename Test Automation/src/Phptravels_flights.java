@@ -1,11 +1,16 @@
+import java.io.File;
+import java.io.IOException;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 //import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 //import org.openqa.selenium.interactions.Actions;
 
 	public class Phptravels_flights {
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException, IOException {
 		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
@@ -71,7 +76,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 	
 		//logout
 		driver.findElement(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/div[2]/div[1]/div[2]/div[1]/a[1]")).click();
-	
+		
+		TakesScreenshot ts=(TakesScreenshot)driver;
+		File file=ts.getScreenshotAs(OutputType.FILE);
+		org.apache.commons.io.FileUtils.copyFile(file, new File("E:\\demo.jpeg"));
+		System.out.println("Saved the screenshot");
+		
 		//driver.close();
 	
 	}

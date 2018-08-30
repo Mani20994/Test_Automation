@@ -25,6 +25,7 @@ public class Autocart {
 		FileUtils.copyFile(scrFile, new File("E:\\Selenium\\screenshot1.png"), true);	
 		
 		driver.findElement(By.xpath(".//a[@class='login']")).click();
+		Thread.sleep(1000);
 		driver.findElement(By.xpath(".//input[@id='email']")).sendKeys("ap.math90@gmail.com");
 		driver.findElement(By.xpath(".//input[@id='passwd']")).sendKeys("pqu772_90");
 		Thread.sleep(1000);
@@ -39,10 +40,10 @@ public class Autocart {
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 		
 		driver.findElement(By.xpath(".//p[@id='add_to_cart']//button[@name='Submit']")).click();
-		Thread.sleep(1000);
+		Thread.sleep(7000);
 				
 		driver.findElement(By.xpath("//a[contains(@title,'Proceed to checkout')]")).click();
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		
 		driver.findElement(By.xpath(".//*[@id='center_column']/p[2]/a[1]/span")).click();
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
