@@ -2,39 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-	<classpathentry kind="lib" path="C:/Users/minds9/Desktop/jar files/selenium-server-standalone-3.13.0 (1).jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/cglib-nodep-3.2.4.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/commons-codec-1.10.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/commons-exec-1.3.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/commons-io-2.5.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/commons-lang3-3.4.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/commons-logging-1.2.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/cssparser-0.9.20.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/gson-2.3.1.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/guava-19.0.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/hamcrest-core-1.3.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/hamcrest-library-1.3.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/htmlunit-2.23.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/htmlunit-core-js-2.23.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/httpclient-4.5.2.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/httpcore-4.4.4.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/httpmime-4.5.2.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/javax.servlet-api-3.1.0.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/jetty-io-9.2.13.v20150730.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/jetty-util-9.2.13.v20150730.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/jna-4.1.0.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/jna-platform-4.1.0.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/junit-4.12.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/neko-htmlunit-2.23.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/netty-3.5.7.Final.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/phantomjsdriver-1.3.0.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/sac-1.3.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/serializer-2.7.2.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/websocket-api-9.2.15.v20160210.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/websocket-client-9.2.15.v20160210.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/websocket-common-9.2.15.v20160210.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/xalan-2.7.2.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/xercesImpl-2.11.0.jar"/>
-	<classpathentry kind="lib" path="D:/zakiya/lib/xml-apis-1.4.01.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Nxt/jar files/selenium-server-standalone-3.13.0.jar"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
