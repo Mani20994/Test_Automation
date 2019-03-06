@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="58546" started-at="2019-02-14T06:17:09Z" finished-at="2019-02-14T06:18:08Z">
+  <suite name="Default suite" duration-ms="11175" started-at="2019-03-05T09:17:16Z" finished-at="2019-03-05T09:17:27Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="58546" started-at="2019-02-14T06:17:09Z" finished-at="2019-02-14T06:18:08Z">
-      <class name="lati">
-        <test-method status="PASS" signature="main()[pri:0, instance:lati@394e1a0f]" name="main" duration-ms="58504" started-at="2019-02-14T06:17:09Z" finished-at="2019-02-14T06:18:08Z">
+    <test name="Default test" duration-ms="11175" started-at="2019-03-05T09:17:16Z" finished-at="2019-03-05T09:17:27Z">
+      <class name="Verify_Tool_Tip">
+        <test-method status="PASS" signature="testTooltip()[pri:0, instance:Verify_Tool_Tip@394e1a0f]" name="testTooltip" duration-ms="11144" started-at="2019-03-05T09:17:16Z" finished-at="2019-03-05T09:17:27Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- main -->
-      </class> <!-- lati -->
+        </test-method> <!-- testTooltip -->
+      </class> <!-- Verify_Tool_Tip -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
